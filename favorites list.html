@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrus's Favorite's list</title>
+    <link rel="icon" href="https://media1.tenor.com/m/NMqonyTCzZcAAAAC/sv.gif" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', monospace;
+            color: #eee;
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        #rain-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px;
+            background-color: rgba(0, 30, 50, 0.8);
+            color: #44fffb;
+            font-size: 0.9em;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin: 80px auto 20px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            position: relative;
+            gap: 15px;
+            max-height: calc(100vh - 100px);
+        }
+
+        .box {
+            background-color: rgba(0, 50, 80, 0.7);
+            border: 2px solid #3a379e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            transition: max-height 0.3s ease-in-out;
+            overflow: visible;
+            max-height: none;
+            position: relative;
+        }
+
+        .box h2 {
+            color: #ddd;
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .box.expanded {
+            max-height: none;
+        }
+
+        .box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .box ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box ul li img {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 5px;
+        }
+
+        .box ul li div {
+            flex: 1;
+        }
+
+        .box ul li div h4 {
+            font-size: 1em;
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+
+        .box ul li div p {
+            font-size: 0.8em;
+            margin: 0 0 5px 0;
+            color: #eee;
+        }
+
+        .box .see-more {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 100, 150, 0.8);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+            font-size: 0.9em;
+            border: none;
+            display: none;
+        }
+
+        .box .see-more:hover {
+            background-color: rgba(0, 120, 180, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .box ul li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .box ul li img {
+                max-width: 100%;
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<canvas id="rain-canvas"></canvas>
+<div class="header">
+    <h1>Syrus's favorite's list</h1>
+</div>
+<div class="container">
+    <div class="box" id="top-vtubers">
+        <h2>Top 10 vtubers</h2>
+        <ul>
+            <li><img src="https://cdn.discordapp.com/attachments/1120240997473988690/1369451688938963136/Screenshot_2025-05-06_181133.png?ex=681be8c5&is=681a9745&hm=9dcb34f778f13fc7ac6edf0e0e4ff52e6ba22c0237a1b1b161a3277f101277a6&" alt="Game 10"><div><h4>Zentreya</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyHCwBl4jF5ysnQTIRmpFNY1tO4_wKDVSTzi0NopD09eqEuLn3tpD1_43vvfir8xjjjws&usqp=CAU" alt="Game 10"><div><h4>Inugami Korone</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://i.pinimg.com/736x/2f/48/b9/2f48b97b16571cd93ccdbbce38a69e55.jpg" alt="Game 3"><div><h4>Houshou Marine</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://i1.sndcdn.com/artworks-uQWMUnVTv1vxN7DZ-bewVDg-t500x500.jpg" alt="Game 4"><div><h4>Usada Pekora</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://cdn.discordapp.com/attachments/1120240997473988690/1369458031657484338/image.png?ex=681beeae&is=681a9d2e&hm=65785a230eb55680afc589da5750fd45861e1317b2be9035d0f13601d963971a&" alt="Game 5"><div><h4>Usada Pekora's mother</h4><p>Rating: 11/10</p><p></p></div></li>
+            <li><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/c1dfa8fd-9987-4fc4-9de3-2c99666da297-profile_image-300x300.png" alt="Game 6"><div><h4>Shylily</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/5825656f-f28b-4343-9a93-293c9692092a-profile_image-300x300.png" alt="Game 7"><div><h4>Kenji...</h4><p>Rating: 9/10</p><p></p></div></li>
+            <li><img src="https://cdn.discordapp.com/attachments/1120240997473988690/1369459341434032248/image.png?ex=681befe6&is=681a9e66&hm=8d6a1dd728cb090a246f34fe5e2fd6b5ee04fd61c0e9056290e4187083f4bf22&" alt="Game 8"><div><h4>Fuwawa Abyssgard</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://cdn.discordapp.com/attachments/1120240997473988690/1369459410149314681/image.png?ex=681beff6&is=681a9e76&hm=118e52d9620940463213c5b64da018711d0e103425e3b54d48008940f3d03664&" alt="Game 9"><div><h4>Mococo Abyssgard</h4><p>Rating: 10/10</p><p></p></div></li>
+            <li><img src="https://hololist.net/wp-content/uploads/2022/02/tsunomaki-watame-portrait-66.jpg" alt=""><div><h4>Tsunomaki Watame</h4><p>Rating: 9/10</p><p></p></div></li>
+        </ul>
+        <button class="see-more">See Less</button>
+    </div>
+    <div class="box" id="top-games">
+        <h2>Top 10 Favorite Games</h2>
+        <ul>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2679460/header.jpg?t=1741600226" alt="Game 1"><div><h4>Metaphor: ReFantazio</h4><p>Rating: 8/10</p><p>Hours: 13 (Don't have the free time to finish currently)</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/4000/header.jpg?t=1736937068" alt="Game 2"><div><h4>Garry's mod</h4><p>Rating: 10/10</p><p>Hours: 1,114</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/980610/header.jpg?t=1728170196" alt="Game 3"><div><h4>Quaver</h4><p>Rating: 7/10</p><p>Hours: 403</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/502800/header.jpg?t=1741903875" alt="Game 4"><div><h4>SENRAN KAGURA ESTIVAL VERSUS</h4><p>Rating: 11/10</p><p>Hours: 46</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2458860/header.jpg?t=1735296194" alt="Game 5"><div><h4>Summer Clover</h4><p>Rating: 11/10</p><p>Hours: 700</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2076010/header.jpg?t=1740992374" alt="Game 6"><div><h4>UNDER NIGHT IN-BIRTH II Sys:Celes</h4><p>Rating: 8/10</p><p>Hours: 179</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/440/header.jpg?t=1745368581" alt="Game 7"><div><h4>Team Fortess 2</h4><p>Rating: 4/10</p><p>Hours: 796</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/322170/header.jpg?t=1703006148" alt="Game 8"><div><h4>Geometry Dash</h4><p>Rating: 7/10</p><p>Hours: 8,992</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/936160/header.jpg?t=1729053155" alt="Game 9"><div><h4>Atelier Rorona ~The Alchemist of Arland~ DX</h4><p>Rating: 7/10</p><p>Hours: 15</p></div></li>
+            <li><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/39210/header.jpg?t=1738089746" alt="Game 10"><div><h4>Final Fantasy XIV</h4><p>Rating: 20/10</p><p>Hours: 82 days</p></div></li>
+        </ul>
+        <button class="see-more">See Less</button>
+    </div>
+    <div class="box" id="top-animes">
+        <h2>Top 7 Favorite Animes</h2>
+        <ul>
+            <li><img src="https://cdn.myanimelist.net/images/anime/1633/123689.jpg" alt="Anime 1"><div><h4>The Tatami Galaxy</h4><p>Rating: 9/10</p><p>Episodes: 11</p></div></li>
+            <li><img src="https://cdn.myanimelist.net/images/anime/8/80356.jpg" alt="Anime 2"><div><h4>Mob Psycho 100 series</h4><p>Rating: 9/10</p><p></p></div></li>
+            <li><img src="https://cdn.myanimelist.net/images/anime/1584/143719.jpg" alt="Anime 3"><div><h4>Dandadan</h4><p>Rating: 10/10</p><p>Episodes: 12</p></div></li>
+            <li><img src="https://cdn.myanimelist.net/images/anime/1279/140233.jpg" alt="Anime 4"><div><h4>Kizumonogatari Trilogy</h4><p>Rating: 9.1/10</p><p>Movie's: 3</p></div></li>
+            <li><img src="https://m.media-amazon.com/images/I/51sgCPkkqvL._AC_UF894,1000_QL80_.jpg" alt="Anime 5"><div><h4>Monogatari (Series)</h4><p>Rating: 9.5/10</p><p>Episodes: 103</p></div></li>
+            <li><img src="https://cdn.myanimelist.net/images/anime/1328/147315.jpg" alt="Anime 4"><div><h4>One Piece Movie 06: Omatsuri Danshaku to Himitsu no Shima</h4><p>Rating: 8.8/10</p><p>Movie</p></div></li>
+            <li><img src="https://cdn.myanimelist.net/images/anime/1449/142053.jpg" alt="Anime 4"><div><h4>Blood Blockade Battlefront</h4><p>Rating: 9/10</p><p>episode's: 24</p></div></li>
+        </ul>
+        <button class="see-more">See Less</button>
+    </div>
+    <div class="box" id="top-characters">
+        <h2>Top 15 Favorite Characters</h2>
+        <ul>
+            <li><img src="https://cdn.myanimelist.net/images/characters/15/323833.jpg" alt="Character 1"><div><h4>Ui Inaba</h4><p>From: Killing bites</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/9/541675.jpg" alt="Character 2"><div><h4>Tokage </h4><p>From: Mayonaka Punch</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/5/385325.jpg" alt="Character 3"><div><h4>Kohaku </h4><p>From: Dr. Stone</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/16/559456.jpg" alt="Character 4"><div><h4>Araragi Koyomi</h4><p>From: Monogatari (Series)</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/16/153853.jpg" alt="Character 5"><div><h4>Viral</h4><p>From: Gurren Lagann</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/11/89167.jpg" alt="Character 6"><div><h4>Ryouko Hanuki</h4><p>From: The Tatami Galaxy</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/11/89099.jpg" alt="Character 7"><div><h4>Watashi</h4><p>From: The Tatami Galaxy</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/3/311918.jpg" alt="Character 8"><div><h4>Akashi</h4><p>From: The Tatami Galaxy</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/16/550120.jpg" alt="Character 9"><div><h4>Kiyoshi Fujino</h4><p>From: Prison School</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/3/342787.jpg" alt="Character 10"><div><h4>Zapp Renfro</h4><p>From: Kekkai Sensen</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/14/329615.jpg" alt="Character 11"><div><h4>Fujiko Mine</h4><p>From: Lunpin III</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/4/301226.jpg" alt="Character 12"><div><h4>Yotsugi Ononoki</h4><p>From: Monogatari (Series)</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/16/234167.jpg" alt="Character 13"><div><h4>Shinobu "Kiss-Shot Acerola-Orion Heart-Under-Blade, Fair Princess, Acerola" Oshino</h4><p>From: Monogatari (Series)</p>
+            <li><img src="https://cdn.myanimelist.net/images/characters/11/222449.jpg" alt="Character 14"><div><h4>Suruga Kanbaru</h4><p>From: Monogatari (Series)</p>
+                <li><img src="https://cdn.myanimelist.net/images/characters/9/505076.jpg" alt="Character 14"><div><h4>Orihime "Hime" Inoue</h4><p>From: Bleach</p>
+        </ul>
+        <button class="see-more">See Less</button>
+    </div>
+</div>
+<script>
+    let drops = [];
+    let numDrops = 600;
+    let windSpeed = 1;
+    let gravity = 0.5;
+    let baseLength = 8;
+    let lengthVariation = 6;
+    let baseSpeed = 4;
+    let speedVariation = 2;
+    let baseWeight = 1;
+    let weightVariation = 1;
+    let floodHeight = 0;
+    let flooding = false;
+    let floodSpeed = 2;
+    let floodDelay = 10000;
+    let floodDuration = 10000;
+    let startTime;
+    let floodTimer;
+    let isFlushing = false;
+    let flushSpeed = 5;
+    let waveFrequency = 0.02;
+    let waveAmplitude = 10;
+    let wavePhase = 0;
+    let rainCanvas;
+
+    function setup() {
+        rainCanvas = createCanvas(windowWidth, windowHeight);
+        rainCanvas.id('rain-canvas');
+        rainCanvas.style('z-index', '-1');
+        colorMode(HSB, 255);
+        initializeRain();
+        startTime = millis();
+    }
+
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+
+    function initializeRain() {
+        drops = [];
+        for (let i = 0; i < numDrops; i++) {
+            drops.push(new Drop());
+        }
+        floodHeight = 0;
+        isFlushing = false;
+        wavePhase = 0;
+    }
+
+    function draw() {
+        clear();
+        background(230, 20, 30, 20);
+        for (let i = 0; i < drops.length; i++) {
+            drops[i].update();
+            drops[i].show();
+        }
+
+        if (millis() - startTime > floodDelay && !flooding && !isFlushing) {
+            flooding = true;
+            floodTimer = millis();
+        }
+
+        if (flooding) {
+            floodHeight += floodSpeed;
+            if (floodHeight >= height / 2) {
+                floodHeight = height / 2;
+                flooding = false;
+                isFlushing = true;
+                floodTimer = millis();
+            }
+        }
+
+        if (isFlushing) {
+            floodHeight -= flushSpeed;
+            if (floodHeight <= 0) {
+                floodHeight = 0;
+                isFlushing = false;
+                startTime = millis();
+            }
+        }
+
+        if (floodHeight > 0) {
+            wavePhase += 0.05;
+            let waveDisplacement = sin(wavePhase) * waveAmplitude;
+            fill(160, 100, 70, 150);
+            beginShape();
+            for (let x = 0; x <= width; x += 10) {
+                let y = height - floodHeight + sin(x * waveFrequency + wavePhase) * waveAmplitude;
+                vertex(x, y);
+            }
+            vertex(width, height);
+            vertex(0, height);
+            endShape(CLOSE);
+        }
+    }
+
+    class Drop {
+        constructor() {
+            this.x = random(width);
+            this.y = random(height);
+            this.z = random(0, 100);
+            this.len = baseLength + random(-lengthVariation, lengthVariation);
+            this.speed = baseSpeed + random(-speedVariation, speedVariation);
+            this.weight = baseWeight + random(-weightVariation, weightVariation);
+            this.color = color(180 + random(-30, 30), 100, 100, 180);
+        }
+
+        update() {
+            this.y += this.speed * this.weight;
+            this.x += windSpeed * this.weight;
+            if (this.y > height) {
+                this.y = random(-height, -height / 2);
+                this.x = random(width);
+            }
+            if (this.x > width) {
+                this.x = 0;
+            }
+            if (this.x < 0) {
+                this.x = width;
+            }
+        }
+
+        show() {
+            let sw = map(this.weight, baseWeight, baseWeight + weightVariation, 1, 3);
+            strokeWeight(sw);
+            stroke(this.color);
+            line(this.x, this.y, this.x, this.y + this.len);
+        }
+    }
+</script>
+</body>
+</html>
