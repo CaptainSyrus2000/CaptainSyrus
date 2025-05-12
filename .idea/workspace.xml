@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Shadify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shadify.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,6 +57,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jayde\OneDrive\Documents\GitHub\CaptainSyrus" />
+      <recent name="C:\Users\jayde\OneDrive\Documents\GitHub\CaptainSyrus\src\javascript" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="script.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -95,6 +105,10 @@
       <workItem from="1746662162614" duration="600000" />
       <workItem from="1746715356273" duration="733000" />
       <workItem from="1746728973107" duration="853000" />
+      <workItem from="1746731377296" duration="110000" />
+      <workItem from="1747067755932" duration="1000" />
+      <workItem from="1747067799306" duration="202000" />
+      <workItem from="1747068492649" duration="3524000" />
     </task>
     <servers />
   </component>
