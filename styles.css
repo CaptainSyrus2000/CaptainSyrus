@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffffff;
+    background-color: #222;
+    overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#rain-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    background-color: rgba(0, 30, 50, 0.8);
+    color: #002ecd; /* Green titles */
+    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
+    font-size: 0.9em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.header h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.header-links a {
+    color: #002ecd; /* Green titles */
+    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: relative;
+    gap: 15px;
+    max-height: calc(100vh - 80px);
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.box {
+    background-color: rgba(5, 5, 5, 0.7);
+    border: 2px solid #3a379e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1;
+    min-width: 300px;
+}
+
+.box h2 {
+    color: #002ecd; /* Green titles */
+    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
+    color: #0037ff;
+    border-bottom: 1px solid #002ecd;
+    padding-bottom: 10px;
+    margin-top: 0; /* Reset  margin-top */
+}
+
+#box1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 110px; /* Add padding to the top of the box */
+}
+
+#box1 .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    z-index: 0;
+}
+
+#box1 .profile-picture-container {
+    position: absolute;
+    top: 15;
+    left: 25px;
+    z-index: 1;
+}
+
+#box1 .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3a379e;
+    background-color: #333;
+    object-fit: cover;
+}
+
+#box1 h2{
+    margin-top: 120px;
+    padding-top: 10px;
+}
+
+.badges {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.badges img {
+    max-height: 50px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 80, 120, 0.6);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.social-links a:hover {
+    background-color: rgba(0, 100, 150, 0.8);
+}
+
+.social-links i {
+    margin-right: 10px;
+    font-size: 1.2em;
+    color: #87CEEB;
+}
+
+#spotify-status {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+#update-box {
+    background-color: rgba(0, 0, 0, 0.78);
+    border: 2px solid #3a379e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+#box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#box3 img {
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        align-items: center;
+    }
+}

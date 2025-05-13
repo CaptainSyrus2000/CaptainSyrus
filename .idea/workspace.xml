@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shadify.js" beforeDir="false" afterPath="$PROJECT_DIR$/Shader stuff/Shadify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shadify.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Shader stuff/Shadify.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -55,6 +60,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jayde\OneDrive\Documents\GitHub\CaptainSyrus" />
+      <recent name="C:\Users\jayde\OneDrive\Documents\GitHub\CaptainSyrus\Shader stuff" />
       <recent name="C:\Users\jayde\OneDrive\Documents\GitHub\CaptainSyrus\src\javascript" />
     </key>
   </component>
@@ -103,7 +109,7 @@
       <workItem from="1746731377296" duration="110000" />
       <workItem from="1747067755932" duration="1000" />
       <workItem from="1747067799306" duration="202000" />
-      <workItem from="1747068492649" duration="4617000" />
+      <workItem from="1747068492649" duration="12700000" />
     </task>
     <servers />
   </component>

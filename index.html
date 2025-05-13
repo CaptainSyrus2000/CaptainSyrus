@@ -7,220 +7,21 @@
     <link rel="icon" href="https://media1.tenor.com/m/NMqonyTCzZcAAAAC/sv.gif" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css"> <style>
     <style>
-
-        body {
-            margin: 0;
-            font-family: 'Press Start 2P', monospace;
-            color: #ffffff;
-            background-color: #222;
-            overflow: hidden;
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-        #rain-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 5px 20px;
-            background-color: rgba(0, 30, 50, 0.8);
-            color: #44fffb; /* Green titles */
-            text-shadow: 0 0 5px #44fffb; /* Green glow effect */
-            font-size: 0.9em;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            box-sizing: border-box;
-        }
-
-        .header h1 {
-            font-size: 1.2em;
-            margin: 0;
-        }
-
-        .header-links a {
-            color: #44fffb; /* Green titles */
-            text-shadow: 0 0 5px #44fffb; /* Green glow effect */
-            text-decoration: none;
-            margin-left: 10px;
-            font-size: 0.9em;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            max-width: 1200px;
-            margin: 60px auto 20px auto;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow-y: auto;
-            position: relative;
-            gap: 15px;
-            max-height: calc(100vh - 80px);
-        }
-
-        .row {
-            display: flex;
-            width: 100%;
-            gap: 15px;
-            margin-bottom: 0;
-        }
-
-        .box {
-            background-color: rgba(0, 50, 80, 0.7);
-            border: 2px solid #3a379e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .box h2 {
-            color: #44fffb; /* Green titles */
-            text-shadow: 0 0 5px #44fffb; /* Green glow effect */
-            color: #44fffb;
-            border-bottom: 1px solid #3a379e;
-            padding-bottom: 10px;
-            margin-top: 0; /* Reset  margin-top */
-        }
-
-        #box1 {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            padding-top: 110px; /* Add padding to the top of the box */
-        }
-
-        #box1 .banner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 200px;
-            color: #fff;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px 10px 0 0;
-            z-index: 0;
-        }
-
-        #box1 .profile-picture-container {
-            position: absolute;
-            top: 15;
-            left: 25px;
-            z-index: 1;
-        }
-
-        #box1 .profile-picture {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #3a379e;
-            background-color: #333;
-            object-fit: cover;
-        }
-
-        #box1 h2{
-            margin-top: 120px;
-            padding-top: 10px;
-        }
-
-        .badges {
-            display: flex;
-            gap: 5px;
-            margin-top: 10px;
-        }
-
-        .badges img {
-            max-height: 50px;
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: rgba(0, 80, 120, 0.6);
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: left;
-        }
-
-        .social-links a:hover {
-            background-color: rgba(0, 100, 150, 0.8);
-        }
-
-        .social-links i {
-            margin-right: 10px;
-            font-size: 1.2em;
-            color: #87CEEB;
-        }
-
-        #spotify-status {
-            padding: 10px;
-            background-color: rgba(100, 0, 50, 0.6);
-            border-radius: 5px;
-        }
-
-        #update-box {
-            background-color: rgba(50, 0, 80, 0.7);
-            border: 2px solid #3a379e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            min-width: 300px;
-            max-width: 400px;
-        }
-
-        #box3 {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        #box3 img {
-            max-width: 100%;
-            margin-bottom: 5px;
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                align-items: center;
-            }
-        }
-
-
     </style>
 </head>
 <body>
 <div class="header">
     <h1>Syrus's Lan Party</h1>
     <div class="header-links">
-        <a href="">Friends awesome sites:</a>
+        <a href="">awesome sites:</a>
         <a href="https://tylersfoot.dev">Tyler's site</a>
         <a href="https://warp.tf/">warp.tf</a>
+        <a href="https://quaver.warp.tf/packs/month/">Quaver packs</a>
+        <a href="https://nekoha.moe/">nekoha.moe</a>
         <a href=>|</a>
-        <a href="favorites%20list.html">My favorite's</a>
+        <a href="">My favorite's (closed for revamp)</a>
     </div>
 </div>
 
@@ -231,38 +32,36 @@
         <div id="update-box" class="box"><h2>My Signatures</h2>
             <p>Incase you are a lazy bum here are my flashy signatures (i did not make them)</p>
             <img src="https://malsignature.com/?/view?username=CaptainSyrus&style=normal" alt="Stamp 4">
+            <img src="https://osu-sig.vercel.app/card?user=OwariMonogatari&mode=taiko&lang=en&animation=true&hue=149&mini=true" alt="Stamp 4">
         </div>
         <div id="box1" class="box">
-            <div class="banner" style="background-image: url('https://i.pinimg.com/originals/f0/29/3c/f0293c1d9824503f087b9e2e4be53a3c.gif ');"></div>
+            <div class="banner" style="background-image: url('https://i.pinimg.com/originals/2a/a2/e3/2aa2e30634ad01894e9651c78a451111.gif ');"></div>
             <div class="profile-picture-container">
-                <img src="https://i.pinimg.com/474x/6a/4a/ea/6a4aeadeac142700b801da8d78d7b6f3.jpg" alt="Profile Picture" class="profile-picture">
+                <img src="https://i.pinimg.com/736x/2c/4b/a3/2c4ba3e7c3e3bfc09f5ad61860b06a16.jpg" alt="Profile Picture" class="profile-picture">
             </div>
-            <h2>mWo CaptainSyrus | He/Him | 🇸🇪 Skellefteå, Västerbottens Län, Sweden</h2>
-
+            <h2 style="background: linear-gradient(to right, #002ecd, #908eff); -webkit-background-clip: text; color: transparent; text-shadow: 0 0 5px #0037ff;">FUMO CaptainSyrus</h2>
+            <h2<p>He/Him | 🇸🇪 Skellefteå, Västerbottens Län, Sweden</h2>
             <p>learning suomi (finnish) and swedish
                 project moving to sweden 2027
-
-                i'm from 🇯🇲 jamaica, saint james, maroon town but i plan to move to Skellefteå, Vasterbottens Lan, Sweden soon (project finland dropped)
-
-                - I play 4k and learning 7k/BMS
-                - as of rn I mainly play Quaver SVs, and etterna slop charts. (dabbling into the arts of BMS)
-                - Sniper, and Soldier tf2
-                - sweaty armpits of orihime
-                - we YES WE all will be cracking femboys and The asian baby girls, AND Latinas)
-            </p>
-            <h3>badge collection</h3>
+                i'm from 🇯🇲 jamaica, saint james, maroon town but i plan to move to Skellefteå, Vasterbottens Lan, Sweden soon (project finland dropped)</p>
+            <p>- (Taiko demon) don'r look at my signature i don't play osu taiko</p>
+            <p>- as of rn I mainly play Quaver SVs, Beatraja, osu!taiko</p>
+            <p>- Sniper, and Soldier tf2</p>
+            <p>- Terrible Website dev</p>
+            <p>- I moderate for Frutiger Space (<a href="https://store.steampowered.com/app/3591510/Frutiger_Space/"><i class="fab fa-steam"></i> Wishlist now on steam</a>)</p>
+            <h3>buttons</h3>
             <div class="badges">
-                <img src="https://cdn.myanimelist.net/images/badge/2025_fal_spring.png" alt="Badge 1">
-                <img src="https://cdn.myanimelist.net/images/badge/2024_secret_santa_badge.png" alt="Badge 2">
-                <img src="https://cdn.myanimelist.net/images/badge/2024_20th.png" alt="Badge 3">
-                <img src="https://cdn.myanimelist.net/images/badge/2024_fall_fal.png" alt="Badge 4">
-                <img src="https://cdn.myanimelist.net/images/badge/2024_stacks_challenge_summer_manga.png" alt="Badge 5">
-                <img src="https://cdn.myanimelist.net/images/badge/2024_stacks_challenge_summer_anime.png" alt="Badge 5">
-                <img src="https://cdn.esportfire-services.com/d7ca26fba6962ea1c4778cc39475b96abb2fd94226a2f914557360f908003916" alt="Badge 5">
-                <img src="https://cdn.esportfire-services.com/a5a556bbab567cff9159fa2597bf2cd75e1a0eca4bb154a16738de6e2d1aef6e" alt="Badge 5">
-                <img src="https://www.flashflashrevolution.com/images/profiles/st-pink.png" alt="Badge 5">
-                <img src="https://www.flashflashrevolution.com/images/profiles/julyskilltoken15.png" alt="Badge 5">
-                <img src="https://www.flashflashrevolution.com/images/profiles/julyskilltoken6.png" alt="Badge 5">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt="">
+                <img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt="">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt="B">
+                <img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt="">
+                <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="">
+                <img src="https://cyber.dabamos.de/88x31/blender.gif" alt="">
+                <img src="https://cyber.dabamos.de/88x31/119.gif" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
 
             </div>
         </div>
@@ -279,21 +78,18 @@
             <a href="https://github.com/CaptainSyrus2000"><i class="fa-solid fa-link"></i> (Outdated Github)</a>
         </div>
     </div>
-    <div id="box3" class="box">
-        <h2>Custom Buttons</h2>
-
-        <li><img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt="Anime 4">
-        <img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt="Anime 4"><img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt="Stamp 1"><li><img src="https://adriansblinkiecollection.neocities.org/buttons/e9.jpg" alt="Anime 4"><img src="https://adriansblinkiecollection.neocities.org/buttons/e22.gif" alt="Anime 4">
-        <img src="https://adriansblinkiecollection.neocities.org/stamps/k17.png" alt="Stamp 2"><li><img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt="Anime 4">
-        <img src="https://external-media.spacehey.net/media/s0gzs4ZJPQ60lwzeiM_oPGfxfV-niGFOyI9rxR24-Oms=/https://plasticdino.neocities.org/buttons/minnamiku.gif" alt="Anime 4">
-        <img src="https://adriansblinkiecollection.neocities.org/buttons/a72.gif" alt="/"><li><img src="https://adriansblinkiecollection.neocities.org/buttons/e29.jpg" alt="Anime 4"><img src="https://adriansblinkiecollection.neocities.org/buttons/e42.gif" alt="Stamp 4">
-        <img src="https://adriansblinkiecollection.neocities.org/stamps/f58.png" alt="Stamp 4"><li><img src="https://adriansblinkiecollection.neocities.org/stamps/g11.gif" alt="Anime 4">
-        <img src="https://adriansblinkiecollection.neocities.org/stamps/a10.gif" alt="Stamp 4">
-        <img src="https://adriansblinkiecollection.neocities.org/stamps/e36.png" alt="Stamp 4">
+    <div id="box2" class="box">
+        <h2>Junk Links</h2>
+        <div class="social-links">
+            <a href="https://discord.gg/BEj5gcFD2x"><i class="fab fa-discord"></i> Fruiger Space</a>
+        <a href="https://boku.tachi.ac/u/Syrus/"><i class="fa-solid fa-gamepad"></i> Boku.Tachi</a>
+            <a href="https://kamai.tachi.ac/u/Syrus/"><i class="fa-solid fa-gamepad"></i> Kamai.Tachi</a>
+    </div>
     </div>
     <div id="spotify-status" class="box">
         <h2>Updates/Events</h2>
-        <p>Update: Fixed/revamped all of drsyrus.xyz 2024-2025 expect small changed to come sooner or later</p>
+        <p>Update: added Glsl/Shadify for shader bg.</p>
+        <p>Setting up Vultr VPS for future stuff like status, and chat boxes 5/16/25</p>
     </div>
 </div>
 
