@@ -22,9 +22,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
-    background-color: rgba(0, 30, 50, 0.8);
-    color: #002ecd; /* Green titles */
-    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
+    background-color: rgb(60, 69, 57);
+    color: #87dd6c; /* Green titles */
+    text-shadow: 0 0 5px #87dd6c; /* Green glow effect */
     font-size: 0.9em;
     position: fixed;
     top: 0;
@@ -40,8 +40,8 @@ body {
 }
 
 .header-links a {
-    color: #002ecd; /* Green titles */
-    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
+    color: #87dd6c; /* Green titles */
+    text-shadow: 0 0 5px #438032; /* Green glow effect */
     text-decoration: none;
     margin-left: 10px;
     font-size: 0.9em;
@@ -69,20 +69,20 @@ body {
 }
 
 .box {
-    background-color: rgba(5, 5, 5, 0.7);
-    border: 2px solid #3a379e;
+    background-color: rgb(37, 44, 35);
+    border: 2px solid #87dd6c;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(135, 221, 108);
     flex: 1;
     min-width: 300px;
 }
 
 .box h2 {
-    color: #002ecd; /* Green titles */
-    text-shadow: 0 0 5px #0037ff; /* Green glow effect */
-    color: #0037ff;
-    border-bottom: 1px solid #002ecd;
+    color: #438032; /* Green titles */
+    text-shadow: 0 0 5px #87dd6c; /* Green glow effect */
+    color: #87dd6c;
+    border-bottom: 1px solid #438032;
     padding-bottom: 10px;
     margin-top: 0; /* Reset  margin-top */
 }
@@ -118,7 +118,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid #3a379e;
+    border: 3px solid #87dd6c;
     background-color: #333;
     object-fit: cover;
 }
@@ -148,35 +148,35 @@ body {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: rgba(0, 80, 120, 0.6);
-    color: #fff;
+    background-color: rgb(60, 69, 57);
+    color: #87dd6c;
     text-decoration: none;
     border-radius: 5px;
     text-align: left;
 }
 
 .social-links a:hover {
-    background-color: rgba(0, 100, 150, 0.8);
+    background-color: rgb(135, 221, 108);
 }
 
 .social-links i {
     margin-right: 10px;
     font-size: 1.2em;
-    color: #87CEEB;
+    color: #279700;
 }
 
 #spotify-status {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(37, 44, 35);
     border-radius: 5px;
 }
 
 #update-box {
-    background-color: rgba(0, 0, 0, 0.78);
-    border: 2px solid #3a379e;
+    background-color: rgb(37, 44, 35);
+    border: 2px solid #87dd6c;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(135, 221, 108);
     min-width: 300px;
     max-width: 400px;
 }
