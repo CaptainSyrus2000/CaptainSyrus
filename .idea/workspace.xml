@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="" />
+    <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/index_fi.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index_sv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/taskbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/taskbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -109,6 +117,8 @@
       <workItem from="1749521005390" duration="7873000" />
       <workItem from="1749699238503" duration="14974000" />
       <workItem from="1749725100210" duration="108000" />
+      <workItem from="1749725284501" duration="139000" />
+      <workItem from="1749749523165" duration="10265000" />
     </task>
     <servers />
   </component>
