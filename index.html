@@ -13,6 +13,51 @@
     </style>
 </head>
 <body>
+
+<!-- NEW Draggable Sidebar -->
+<div id="sidebar">
+    <div class="sidebar-header">
+        <span>Navigation</span>
+        <button class="minimize-btn">_</button>
+    </div>
+    <div class="sidebar-content">
+        <ul class="nav-list">
+            <li class="main-topic">
+                <span>Games</span>
+                <ul class="sub-links">
+                    <li><a href="#games-1"><i class="fas fa-gamepad"></i> Sub-Genre 1</a></li>
+                    <li><a href="#games-2"><i class="fas fa-gamepad"></i> Sub-Genre 2</a></li>
+                    <li><a href="#games-3"><i class="fas fa-gamepad"></i> Sub-Genre 3</a></li>
+                </ul>
+            </li>
+            <li class="main-topic">
+                <span>Music</span>
+                <ul class="sub-links">
+                    <li><a href="#music-1"><i class="fas fa-music"></i> Sub-Genre 1</a></li>
+                    <li><a href="#music-2"><i class="fas fa-music"></i> Sub-Genre 2</a></li>
+                    <li><a href="#music-3"><i class="fas fa-music"></i> Sub-Genre 3</a></li>
+                </ul>
+            </li>
+            <li class="main-topic">
+                <span>Projects</span>
+                <ul class="sub-links">
+                    <li><a href="#projects-1"><i class="fas fa-code"></i> Sub-Genre 1</a></li>
+                    <li><a href="#projects-2"><i class="fas fa-code"></i> Sub-Genre 2</a></li>
+                    <li><a href="#projects-3"><i class="fas fa-code"></i> Sub-Genre 3</a></li>
+                </ul>
+            </li>
+            <li class="main-topic">
+                <span>Links</span>
+                <ul class="sub-links">
+                    <li><a href="#links-1"><i class="fas fa-link"></i> Sub-Genre 1</a></li>
+                    <li><a href="#links-2"><i class="fas fa-link"></i> Sub-Genre 2</a></li>
+                    <li><a href="#links-3"><i class="fas fa-link"></i> Sub-Genre 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div class="header">
     <h1>Syrus's Lan Party</h1>
     <div class="header-links">
@@ -21,8 +66,6 @@
         <a href="https://warp.tf/">warp.tf</a>
         <a href="https://quaver.warp.tf/packs/month/">Quaver packs</a>
         <a href="https://nekoha.moe/">nekoha.moe</a>
-        <a href=>|</a>
-        <a href="">My favorite's (closed for revamp)</a>
     </div>
 </div>
 
@@ -30,54 +73,26 @@
 
 <div class="container">
     <div class="row">
-        <div id="update-box" class="box"><h2>Signatures & stamps</h2>
-            <img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt="">
-            <img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt="">
-            <img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt="B">
-            <img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/blender.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/applelinks2.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/buyebaystuff88x31.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/color.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/censor_14c.gif" alt="">
-            <img src="https://nekoha.moe/assets/ostan.gif" alt="">
-            <img src="data:image/gif;base64,R0lGODlhWAAfAHAAACwAAAAAWAAfAIcDAwMLAwELCQYAAAkMDAwTAQAUCgARDQseDgwSEA8ADx0NExgdFxcUFBQaGBcVGR0cHBwpAAAjHh0pJx4jIR8WHioAADAeISgdISMXIyofKS8oKCgkJCQpJiUgJSosLCw1LyUhLTQsKTU0ITwnMT0tMjUzMzM8PDxJQyVUSSteSDAZNE0fPFQgOE4mOEUoO0cpPUwzM0coMlMxPlErQVI0Slc4TFczTlwAVms2V2c3XHc/Y20/aXtERERMTExUVFRbW1tFXGVIXmdAV21DZW9QaWtAYHFFZX1BanlMa3tUa3NTbXxWcXRkZGRsbGxjdX9qeHxzc3N9fX2hiTW2mzisnUK4n0aIhXyPnHy8gXTKu3L811A0bZhSa4BIdYhZf4FWdIVDbpROfpBndoBqd4F9gohgjpNwhpZ8iZFmk51XhqhUjLZblLRgiqR4mK9ppb9+oblamcNZncpno8d1scpvrtVosNpzstp7sdd3v917utxyvOF5wt18yex7xOR/0O1+zPGEhISMjIyRgIyUlJSbm5ujqKmkpKSsrKy0tLS8vLzNlYLFnInSnpXWrJ7UuJ3Ov7XS1KTPx73ex7ziwav30KzlwLbryLDh1rzo2b3+17f107iCqcWQrs6KtMybt8aAv9yFttaLvNiavtKutcOHv+PLvcKOxd+bx9+sztynxNStxNK0x9eLx+KNyuqRzu+O0++b1OyV2OyE0/WL0vKO2vuZ2/aU1/GU2vWZ1fikzuOs0eOg3e2w1+a81+S70+ql2/Sr2/Gz3fGd4+yO4vue6fGT4/ya5P2V6v+c7P6c8f+r4e6q6PWi5vaq4fWi7vSs5Pym7Pip6/u17Pa15Pyy7P+77Pyj8/ip8vur+/+z9Pq6+P/Dw8PLy8vQz87HztbO0NjT09Pc3Nzw18H/3sDu6M7/5sf+68b/7Mr/8sz/9NbD1uXV3ObM4OXC5fnG6vbX4/Da7PTM9PjC9fzV/P/n7+Tk5OTm5uvj7O/r6+vo9frk9f/z8/P09fr1/Pz8/PwI/wB9/PAhkODAgggH/lC4sKFDh0AWRgQykaLFixgvNqG4sWNCgyA/+vhAsmRJEyZRqjTBsmXLEzBjyozZ40TNHjhz+uhBsGdIhgIfZtQIRCAHChg4KO2wYQNTkyk/sJRq4oRLqzNl3tyaE+dOnz4PLgz6UGLGgUcpHFW6gcMGChIkUOgAlaTLlyyxVs0K86ZNr1158gQLsuyPioct+oiCASlSpRwSAAjChIkSEQiioqR6Ne9emjZDB9YpmHDhgobPOuEgAUPjowakfBtV7NmzYWlK0IW6krNnrHz7/v1LurRphWTLUlwMAQLc5iRW+GLXz588bNmumdF9svtdvDE/i/8WPbr04LAGUx8+7MMJheYQSMyQkSdZM13//unTlk1bEQQbkBSgSr79BpN4wpUX2E7ngSVWckK1B98DI8SghzHIIENMNfH848889EDBQFMBpnQXcMEpuKBXx6FmmETsOdGcAw9QMUgtxPyBITKt7OIhNEtIwFSJ380EmGALhuRTg2G9CFFE6w0kI40gbBGJMbPsgaEyp8CyTj/7jPGAWyelOFhfhI3F01imBTXRehUNBeVYTjhA4wRTYEGLH23YkowfpkBzyzr+oJEBBU3l9VeT7B2iiCDJAdHED4RwUwhHcnLUxKaccupEE59+uhFFDdXZgJ0DDPHKKo2k0gspm7D/Ykws8JxhwQMDwnSUVD4s18MPTUQRjjiFJKZQsN3ccwiwTjgxZ6dAOMtpFFF0FGwUn2pKansONNDAAwcc4UkZWThiyTjnTAJMMm5oUQUKHnxgVRSKDBtOIU1IwY044RhSiD3eFKJIIoIoIo44iRRycDfiKCKFFIkc7LATUiDCTcQLC1JxxhuL440Uo0rprbcH7AAHI49Uogk65lwSjDI4UGFFChdUZUIh+YjDjT3hKNKNNzt7bA+/4XDTTTgM82wPPwcDzDA34dyjSBT//rM00/d4Y3A44eRTtDjdJNvNpqWO3MABQYRCTjrpqIPOOZS8vEMEKoCwQVUd7CtID0H3/wPw0kvn4w0hiuSjSBOJ3GNPPvYYgojX3XgtDj8fH5LPPd0MjXM+OQdSyD2c/8M105tG1J63CZwdhCuSYHKOJuVkAgkwyBABgAIY3H2CD1wHEkXTOfO7Lz/5dCNI5ogEEvniBHfDTzjeHJwPP48WfjHlijDtNSGJME08v90cQraUCZSfAAE14KKGN+osUo8hqtyCzA4FQOAWS79PLcjQxUsRSCKKGBrPEMEvQRBCHIwTxyEK0TXQISJx+TiEILxhOG9Qz4JLI5g3+jE5REhBYCCDUrPOtwACHAAGeaBDPPDxiXZw4hW0IAYPDgABCXDgAxD4V7EMcY99gc0bXCte9P8QwbCwecMbPPvg0DInDnv0ox6KMJg9DtFEKhrOa9HrBjdydjRvBGJSUmrC+c4ngBe8gRnTAEY1QCEMPdxhFkg4AAOSsgEHFCwKJwDhBHlmQG4IQhDcIEQgkHivQHDjEEAA5CGUp7NEcMNoA9NXIgzpsKBxg2IB1JmxCDJCApzvAWKYBi+sAQxoQOMdoYgDILwAAQc4J0ANAIAJemCCDuxEJQQ5wUB06QOsCIQnpmNPr8oyKUlRxFkSadakBLItToqRANCsAB+2MYxgoMKUzoBGHfqQhxvUDwJ0tAtNVNSVr5gHQk6K01DYxKBPnQ+aAOBDM6JRCndQYxnziMYc/AD/iBwEwJXOYctJvrMXBPFlRUgyTpuUhKRPQZMAAtCAH+SAB1jk4hf3mMYpwmAHHbigAqcCKAZaoxbIOKUkTanLSooUHK0QpzjlcagACAAAG7CBC6JYhiw6cQ9wBAMMa2DBDTyQABrZCT4jTUpJS+qWG36gRLwpAUFthqKs+EVFDgUARAEAgBYk4QtK6AIZrjAGJdBgASF4gNm6dVT4NMc1r1EKU0mUUqgOdKWdaSlocNIsAQBAAAPwK1cHS9gAmG+t3wppW936nsYkBTJsoWtdpFKgExlUODBpFgECK4DOehaiD/Wk+VKH2AcYdUZvdY5zHFvStgwppbyhrGWtQlWDXfLVCYIdAAACOwCI9namoV1A+RZgtpGx9QFuTS1JS/pYt5BoN7GdKm31qtnQehKa5hNucY2r2FaCM7kUCO9jIEvXukZ3KkWialX90qz2uve98I2vfOdL3/ra174BAQA7" alt="">
-            <img src="data:image/webp;base64,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" alt="">
-            <img src="data:image/gif;base64,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" alt="">
-            <img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="">
-            <img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png" alt="">
-            <img src="https://adriansblinkiecollection.neocities.org/buttons/a128.gif" alt="">
-            <img src="https://adriansblinkiecollection.neocities.org/buttons/h3.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/debian-powered.gif" alt="">
-            <img src="https://cdn.discordapp.com/attachments/1304862407855833138/1381830808972820630/Untitled.gif1.png?ex=6848f1ba&is=6847a03a&hm=988ddf77de21afd22e47d1ae26b5c994352cce2d8a18b242a8022239f928c8dc&" alt="">
-            <img src="https://cyber.dabamos.de/88x31/firefox3.gif" alt="">
-            <img src="https://cdn.discordapp.com/attachments/962179885231652966/1381829429097009286/Untitled.gif.png?ex=6848f071&is=68479ef1&hm=e3b8287f666e4abd2308b044c32554714c2e8802145bd64ece1fb4a7864b01c6&" alt="">
-            <img src="https://cyber.dabamos.de/88x31/gfaqs.gif" alt="">
-            <img src="https://comfybox.floofey.dog/imgs/buttons/anonymize.png" alt="">
-            <img src="https://comfybox.floofey.dog/imgs/buttons/php.gif" alt="">
-            <img src="https://comfybox.floofey.dog/imgs/buttons/linux.gif" alt="">
-            <img src="https://cyber.dabamos.de/88x31/rorikon.gif" alt="">
-            <img src="https://malsignature.com/?/view?username=CaptainSyrus&style=normal" alt="Stamp 4">
-
+        <div id="update-box" class="box"><h2>Hotel GuestBook</h2>
+            <iframe class="guestbook-iframe" src="https://users.smartgb.com/g/g.php?a=s&i=g19-02254-6e" title="Guestbook"></iframe>
         </div>
         <div id="box1" class="box">
-            <div class="banner" style="background-image: url('https://cdn2.steamgriddb.com/hero/3925d313c95e874b3e75a4b6d2067d2a.png ');"></div>
+            <div class="banner" style="background-image: url('https://i.pinimg.com/736x/26/f2/ac/26f2acc60a21e0686490bc0ac21ddd36.jpg ');"></div>
             <div class="profile-picture-container">
-                <img src="https://cdn.pfps.gg/pfps/4167-oot-link.png" alt="Profile Picture" class="profile-picture">
+                <img src="https://i.pinimg.com/736x/0a/49/7a/0a497aea142740c7bfdb220e5032297e.jpg" alt="Profile Picture" class="profile-picture">
             </div>
-            <h2 style="background: linear-gradient(to right, #87dd6c, #438032); -webkit-background-clip: text; color: transparent; text-shadow: 0 0 5px #87dd6c;">FUMO CaptainSyrus</h2>
-            <h2<p>He/Him | 🇸🇪 Skellefteå, Västerbottens Län, Sweden</h2>
-            <p>learning suomi (finnish) and swedish</p>
+            <h2 style="background: linear-gradient(to right, #637a95, #0d2c4f); -webkit-background-clip: text; color: transparent; text-shadow: 0 0 5px #637a95;">[FUMO] CaptainSyrus</h2>
+            <h2<p>He/Him | 🇸🇪 Skellefteå, Västerbottens Län, Sweden.</h2>
+            learning suomi (finnish) and swedish</p>
             <p>- (Taiko demon) don't look at my signature i don't play osu taiko</p>
             <p>- as of rn I mainly play Quaver SVs, Beatraja, osu!taiko</p>
             <p>- Sniper, and Soldier tf2</p>
             <p>- Terrible Website dev</p>
-            <p>- I moderate for Frutiger Space (<a href="https://store.steampowered.com/app/3591510/Frutiger_Space/"><i class="fab fa-steam"></i> Wishlist now on steam</a>)</p>
-            <h3></h3>
+            <p>- I moderate for Frutiger Space (<a href="https://store.steampowered.com/app/3591510/Frutiger_Space/"><i class="fab fa-steam"></i> Wishlist now on steam</a>),
+                 I also staff for r/FrutigerAero, And the Frutiger Aero Discord</p>
+
             <div class="badges">
-                <img src="https://adriansblinkiecollection.neocities.org/dividers/thorndivider.gif" alt="Stamp 4">
+                <img src="https://malsignature.com/?/view?username=CaptainSyrus&style=normal" alt="">
             </div>
         </div>
     </div>
@@ -87,31 +102,63 @@
         <h2>My Socials</h2>
         <div class="social-links">
             <a href="https://discord.gg/5Ze49REKZG"><i class="fab fa-discord"></i> My clan FUMO/FUDM/mWo</a>
-            <a href="https://steamcommunity.com/id/CaptainSyrus/"><i class="fab fa-steam"></i> Steam</a>
-            <a href="https://osu.ppy.sh/users/37271504"><i class="fa-solid fa-gamepad"></i> osu!mania</a>
-            <a href="https://myanimelist.net/profile/CaptainSyrus"><i class="fa-regular fa-list-alt"></i> MyAnimeList</a>
-            <a href="https://www.flashflashrevolution.com/profile/CaptainSyrus"><i class="fa-solid fa-link"></i> FlashFlash</a>
-            <a href="https://github.com/CaptainSyrus2000"><i class="fa-solid fa-link"></i> (Outdated Github)</a>
-        </div>
-    </div>
-    <div id="box2" class="box">
-        <h2>My Socials 2</h2>
-        <div class="social-links">
             <a href="https://discord.gg/BEj5gcFD2x"><i class="fab fa-discord"></i> Fruiger Space</a>
             <a href=" https://frutigerspace.wiki/"><i class="fab fa-discord"></i> frutigerspace.wiki</a>
             <a href="https://discord.gg/39KpqzZGmY"><i class="fab fa-discord"></i> Fruiger Space wiki discord</a>
-        <a href="https://boku.tachi.ac/u/Syrus/"><i class="fa-solid fa-gamepad"></i> Boku.Tachi</a>
+            <a href="https://steamcommunity.com/id/CaptainSyrus/"><i class="fab fa-steam"></i> Steam</a>
+            <a href="https://myanimelist.net/profile/CaptainSyrus"><i class="fa-regular fa-list-alt"></i> MyAnimeList</a>
+            <a href="https://anilist.co/user/PBSE/"><i class="fa-regular fa-list-alt"></i> Anilist (OUTDATED)</a>
+            <a href="https://github.com/CaptainSyrus2000"><i class="fa-solid fa-link"></i> (Outdated Github)</a>
+            <a href="https://boku.tachi.ac/u/Syrus/"><i class="fa-solid fa-gamepad"></i> Boku.Tachi</a>
             <a href="https://kamai.tachi.ac/u/Syrus/"><i class="fa-solid fa-gamepad"></i> Kamai.Tachi</a>
+        </div>
     </div>
     </div>
-    <div id="spotify-status" class="box">
-        <h2>Updates/Events</h2>
-        <p>Color theme and shader change</p>
+        <div id="spotify-status" class="box">
+            <h2>Updates/Events</h2>
+            <div class="updates-list">
+                <div class="update-entry">
+                    <p><strong>11/06/2025 -</strong> Changed the layout and styling to a Y2K aesthetic, added a guestbook (still needs to be customized), Added taskbar (movable) will add more webpages later on. Moved the buttons down to the footer (looks better).</p>
+                </div>
+                <div class="update-entry">
+                    <p><strong>10/06/2025 -</strong> Initial color theme and shader change.</p>
+                    <p><div style="text-align: center; width: 100%; padding: 20px 0; color: #3b5978;">
+                        ©CaptainSyrus 2024-2025</p>
 
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt="">
+                        <img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt="">
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt="B">
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/blender.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/applelinks2.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/buyebaystuff88x31.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/color.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/censor_14c.gif" alt="">
+                        <img src="https://nekoha.moe/assets/ostan.gif" alt="">
+                        <img src="data:image/gif;base64,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" alt="">
+                        <img src="data:image/webp;base64,UklGRtwGAABXRUJQVlA4TM8GAAAvV4AHAFfCqLZtJe8rDiMYUoIK9I/g7u5Ww3Vt22Z1Ytvf/ERLKST1pCA927bhSAAAosm2ze/2PdfNmO3NfwAA//8fNWhY5NHhn4zTVOQHKIGAPlAOQ4EhEgSV+CIkA64sdJcM2MP/OpruO8UPQm86DWICyBRwCKDQIGItDq7L1b7Z2ddbx+FomU227dY2XzhdEMM57IASTYSEoBhOkSQQujPQGqU4BAUT/NoOfGbxc69fnamdn/F80t4vtt/Euw2kkBCLhj1KQfyBAkDktnK+UC420v6OUWjMs0dLEHG+8zdg+e3iw0b1oRHJLDv9W7KES0aMNAEREVKwrb1tG/F3KIgACBW6UCnOSQAC7GqU0qa4W9n/lqjps4Dvj+j/BEiyrb1tm48AbaeOWP0DbBvwyBIGLOOI+99Ryxa+L6L/ExD9fwePIhi2cIA20VEwS2u00aHnO/65rtgHaxTuvySSWUySNyL68e0CwPcf325W/1u2l0ARdq5kv7eGOTkIZqkSI1O9Kfs7rNFzGeAWKruTwKX8EksxiYBvP4Doe7Q6i/oK+Y2A0ofCSZVyAohEQkmtkAT0/JO5Yt44NpJPUigJNoVRV9dvflxEP6Kb/Ezj3m6MxdWOzm8IghORaGaGYVW5tmdeV8zBWyOKpYImJUxVT66jH9/j6Ee0Og/jDaX6hlQkBTGD4yMnCjo1Vifbou6Zq77ESDWJ0cqJi7ivo6vvP6L8zyRzzdXoebGfHQQlgpkRg8EwiTPapNqXPf/kKvjgWHPHhm2I66I+xVcRrvLo4g+KYF154UyxPEsHcyTBHDNNAetDRIB0FqBxX3rHRqsTWwJKV7CicY7VH8Bx4FnRWYhoWRMYDrynidlOEsLgUFYmFCSVBKVbX/VUBhiZmlnKZkqOPeiGmXP6o2YyyTctWbQYEr9fby1a4JDsFKXJKzOGoqPX4GCJ104wgHW/qRCsTlxvnFYUHJuIgBxY/UEZTRJaVtDYz69559kgmXbDYT8nHnYYXoqqwHbDQzqNQYiBJOO0vk+NtuSKoK9uOCf8CZj6RJe3GGiaX187yYo47EVCA7Nk2g97DPvXnaft3YMmFZtZQS4RPJGaRTLx1KCe0E0OgP4oCY/9NbtqsuGwC0WbA/sjCJDiQMAOwOszxhujaJzOyqacZipKMho38TWN8z9Qt33P2ueAaJL+gWPgJwmlv+yC4HTHL6/NI7o2bOzWwMtQo2DDbLXR/t6ISIa6n5Xx9U1+9hxsfs3Px2zejlGCi3kJpHpjOBUvu+4J9w1qBBTOVMLAh7IGB3hGemrlG1MV3tXxzZlVjqtz+tofGOwyjjS+fQLyZfPYBd41p+Ll+Ym5maWG2eq2qbkqAQSUaDuoiQ5WWUTngKv8XHJTb328OOasgGOxn68BnOZ6ySpLlqfnxzbehru2q1uAx2XT4U4fAxzbyfUfRH8geWMYzjqnHmX+AawJdkKAMlITZwrZVHD30NTcds6Hsq8ZaJtTyTQ2yXUOOsOrfIUimigFWW/BJQSfyL+/iYOn+exEc17MsJyDZyzVZabRP7YofV3VXAItUBJXZqbJXEU5cHmDSUz5CkRvGkjPMWmSLIUB/AnMZ4RZQfPFAL3EmFmqWTIV/rGp274MFZd1GyoqrfNmKtPJ5c1VjCj5Svkqb1nnSF00nzxocQrR0mGxJMwLElNJwBwLZhrLTNK49gjYBHBDFtrA6yMBE2YVEYCozKvsaM6wjXYaD7M1LaAoOaB4oTkwo+WCl54Uicskuie7hWOLNJQ0Nt4JJiMkR7d0cR2NUzaZgmXB/BbPdCgMre8Iavfa6hFosVSZzxSdP1ln3Fa7UG1hAVJWMHlXRZ9v6cOnyJSdS+M63GqWpCrCsOfZnOYLA1rOFsploEwlExHfT5fBehvKegsfmH4xU4Gy7aJb0O2H9zZkdjku0630noZsR8NuSBMseM60XLAKNMqUIP9clQhuW5F32JZ0N2SO6u7L51vQB5DhjAd3j4B1iupwpHG6LDDOpkxj4R7amkswmMY2dTSObz8ChHdKxqOkaXmexROtstPT3WK23w0J87AHtMp8ZjMoOVXi4a6tueKytg4qNalB3fWIPvItPuD9u9tY1unE5T+B/TTDUsvXJ94PbPaH3aBVBptdZpAZTHTftBtvYVRqwYYR103XzqJbjN79+eciHAY+3oFM+y5LjoLbF2be77hZZlAuY8g+S9wvd+LI1mvDbIHUxNu67Dj69HH0/s/5dZFg6pnzDZhO0GWJSAQrs29en18wz5SYTYXKXp+f+DSVR7PVKjVslbAH9i26NroF8OEv0C2SVni+4V38/wYA" alt="">
+                        <img src="data:image/gif;base64,R0lGODlhWAAfAOcRAH8AAIAAAIYAAocAAIECAIkAAIsAAIMEAZQAACMcWigcVo0EATkYTzQaTpcCAJ4AAEUWQ0AYQj0ZTKIBAIYKACsfWU4WQ0EaSY8IAEMaRasAAFEXQJkHAq0BAFkWPksaQ5EKAEccQrQAA0UdR2sTM7cAAJIMAF0YN6QHAZsKAK4FAL8AALkCAJMOAMEAAocPKMIAA8MAAC0nYaUKApwNAJQQAMkAAJIPGZsNGMwAAJ0PALoGAKcMAM4AAXkXLLAKAacNA8UEALoHBpYTAYsUIZ8RANYAALEMAdgAAHQbMKgPANoAANADApgVArwKAKATANsBALENEakRAMYIAJkWAKEUAOMAALMPAuUAAH8cLKkRFDUuaeYAAKoTAJoYAKIWAbQRALQRA9wFAXMiMb4PAJsaANIJAKwVAL0PCZkZGaMYAsgNALUTAOcEAL8RAaUZAq0XAJ0cAIsfI7YVAN0JAqQaEqYbANMNBa8ZAK4ZCMoRAMAUAtQOAOkIAMEVADo2a7gYAMEWA6keAN8NA4EnK5chJMsUAMMYAOoMALIeAOAQAMMZBLscAMQaAOARBM0YAdcVANYUEb0eAK0jAOETAOsQAbsdH88aAsYdAEU9bdkZAL8hAeMWAL0gGu0UAtAdA8khAOQZAMEkANIfANsdAbkmGOUbAMskALUrAN0fAtQiANwfDUZFdOcdAIE3S80mAd4hA9YkAMYpAOkhAMYqGdgnALoxAOElAMAuHsouAewlAtMtEu0nAMQyGd0tANItLdQuG8E3AOUrCugtAM4zH1ZRfck3Hcg5PM47GqFFT9s+EeA7I91CMctJMGVjidlHNqtVYOJOKdVSMd5TPM5dVnhzlXx1ktleT9ViT3x7l4KBndZxaIiFnM96fNh/asqDhcaFf6OOnZWSqdGJhdWLgc+Oh8iVj6Oer8OYltKVhqCisdGWjM+aj6iostKemMejnq+uuNCrp7e2wM6ysL+8wc+6t8vIzc/Kyc7RztLU0dTX09fa1tvd2t7h3eHj4Ofp5iwAAAAAWAAfAAAI/gADCBxIsKDBgwgTKlzIcGGbh1iwcOJEh86SihWXIOnBMYdHGyCniHRBcoXJHSVSlhDBUkTKHU6cMNrDqCYjQHOOqDjDU4pPIChQPHlSpKgODkgd1FjKtEaZJwIfSqWIccnFjBx7eMwB0obIKSRdmFyB8qWTPWjTpsWZ88iPHyp8SpkxF8WECUWL6DjqoG8NE0uHlImjRpDhqA9bmTJF1apVOo7o3PnVbd69f5jnfTsWVqxJF2n9oBW9xwnKOaiPuFXB+ozcGUHt4jV6VEfRKoUNG5406XAAqYoZc3KscYmma5cxK19+D5oQkl9F+iFtWmXbt3BZy5USW3beok++/uTWbVjNkyHoyyBus3gxRatIkESKt7x+/XMvXEQvHXNH2ZSqZceaBhrAFtRdCN4VFG5qNKjGF0QVUUYNQ/y1gAkmrGdKK8FRJV899oWonDYb6Acaf6Z1stw7AqpAYF2x0SVFfTydoUYVERZVBnpDYLjUem20MsssE01ExzgiJvlPMSSEFVN/pSzXTgIQsOaiBnKpoBoeiSRSXwIJSCFIg198UcWZEu5Y4RDrYWHKkLMwZgozIcrDSgUJ/CGOffRUcANJ/KFkiZRUWqnCD0egBohNjHi5HJhwnEGeg2XGYamlQLIH52Lk2KcOngxoYcgj4NhXTANPVlfCoMpNCUGi/nMwatMccNT6ZQI3fqcDek1RyOZvUrUx0ZvDCBNiJglYYEgPfPCxy3L0VPNHAjcEmpKKrSaQwSKbdFvTda7NMMOtfSGAoQkLpGuAARSou4BAs1QS7LCtRGOfPGBG0ey+5ZhTjAxgNuBDHtKlhQuhIcy6mlyxTUCuuedeeC5ggQnES7ymsFckJ9PYp00CF5ACCSTNcmTICR7ggMaojxCjpH3vaDfjy/X1GlgZOP8K50Mbc3KNfdYkkAQspGhCssmGJD1F0o8gQzOhEfj0sj/+9MPPPvqAqddf6EYsUCWVzNJhkdfko48+/PDTjzMJZEHK25oYzccjjyjNsstPYzZl/gSwYUa11fycnQ8+hBeOD5gWskuAQfIG2R7ZhhMedCFFQxK3JrVkrsojqmxuCC1phy766FjvHVTkqKMOpgECLI5QsOwJx8kzqH9MyC1vjwwJNuxIk3ktntOS+vD47O0T8cODWUDrCbURdnAbKrYM6vAkMMYtt8ACSy2arEP4Peg080ndSecBZp6GT3n++RHsxNP6ka+//vKuH/TQ8xxyOMsw96C+xQhvIwUsfKEM1IWjDktLGiYW2Iv0FcpKiMoOdybwAAfELwELWNe6CkA/glDgg0CKXnta4Y3aJWARRsNcOlBXjASc4CsLxEQDCzelDKAmNXDhzgMq2JcLZlCD/hxsHQEIQAGv/SYiERmWcKaHOnG4YmTA8F7k7AGwNCgNE9OZIeGmFAJM1AQncbHLDvtiQcOB6YcaXJfEmIKhqCAxiRtzxDaQNzy2KQAUnXsEKBjowBDQBCcL84kYH3BBiPnIZiZQI2LeiIWKFIkO7qBj5D6VADl0rnOvAAUojOFAGwbILdiJiyAveBTacIBr6aKABhf5RoxgZBWRlCQ+4AGwDywiabjUpCbNdz4b3jA1YVBNrWokBfkNZSh64RXXPsguN76xMcTRBDX6h7xs4OkCaIjOFLAYQz8sMBBp+SJb5hDMWkVqOzMAgoPIVAUzEQVngfkVRJBIlYwQ5w7J9OCGPOxROHqowxkAExouvzIdtRj0JuNUjVtc8xoDITMv7XzQg9yJmzhUAUgSeaQrrRK3O2iBBBJQwPkasAEiLIJuKMUlFklj0D0s6pcKZahP0mmgKhSBKDg900MJEwecfe15j9NoRvZF1JLh8qgsQ6kuV3pQhN5QmD1Bpztz9B2clUENllJDpjZWFY1spCMcKSr5tJlAXb4ik0tdoLfEmZph1oihD8JREWwKnidgVRCTQIUtBMJIK9jTq/H5qla24hGOoHSs0ZnOAnUJirO+IheykIUoRLEJm+DEnJEaplwaRB685hUVeg3GXhtC2tKa9rQNCQgAOw==" alt="">
+                        <img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="">
+                        <img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png" alt="">
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/a128.gif" alt="">
+                        <img src="https://adriansblinkiecollection.neocities.org/buttons/h3.gif" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/debian-powered.gif" alt="">
+                        <img src="https://cdn.discordapp.com/attachments/1304862407855833138/1381830808972820630/Untitled.gif1.png?ex=6848f1ba&is=6847a03a&hm=988ddf77de21afd22e47d1ae26b5c994352cce2d8a18b242a8022239f928c8dc&" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/firefox3.gif" alt="">
+                        <img src="https://cdn.discordapp.com/attachments/962179885231652966/1381829429097009286/Untitled.gif.png?ex=6848f071&is=68479ef1&hm=e3b8287f666e4abd2308b044c32554714c2e8802145bd64ece1fb4a7864b01c6&" alt="">
+                        <img src="https://cyber.dabamos.de/88x31/gfaqs.gif" alt="">
+                        <img src="https://comfybox.floofey.dog/imgs/buttons/anonymize.png" alt="">
+                        <img src="https://comfybox.floofey.dog/imgs/buttons/php.gif" alt="">
+                        <img src="https://comfybox.floofey.dog/imgs/buttons/linux.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-    CaptainSyrus 2024-2025
-    </body>
+
+
     <head>
         <meta property="og:title" content="drysrus.xyz">
         <meta property="og:description" content="JOIN TEAM FUMO: discord.gg/https://discord.gg/5Ze49REKZG">
@@ -120,6 +167,9 @@
         <meta property="og:type" content="website">
         <meta name="theme-color" content="#87DD6CFF">
     </head>
+
+<script type="text/javascript" src='javascript/taskbar.js'></script>
+
 </body>
 </html>
 

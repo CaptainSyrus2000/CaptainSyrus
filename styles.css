@@ -1,30 +1,36 @@
+/*
+ * Y2K Aesthetic Overhaul
+ * This stylesheet transforms the original design into a Y2K-inspired look,
+ * featuring glossy blues, beveled edges, and a futuristic font.
+ * Replaces the original "hacker green" theme.
+ */
+
+/* Import a font that fits the Y2K futuristic theme */
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Press Start 2P', monospace;
-    color: #ffffff;
-    background-color: #222;
-    overflow: hidden;
+    font-family: 'Tektur', 'Arial', sans-serif; /* Use Tektur for a techy feel, with Arial as a fallback */
+    color: #000000; /* Standard black text for readability */
+    background-color: #DCE5F0; /* A light, cool blue-gray background, common in Y2K UIs */
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle geometric pattern for texture */
+    overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+/* The rain canvas doesn't fit the new aesthetic, so we'll hide it. */
 #rain-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    display: none;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
-    background-color: rgb(60, 69, 57);
-    color: #87dd6c; /* Green titles */
-    text-shadow: 0 0 5px #87dd6c; /* Green glow effect */
+    padding: 8px 20px;
+    /* The classic Y2K "aqua" or glossy gradient effect */
+    background: linear-gradient(to bottom, #7b9dbe 0%, #3b5978 100%);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* A simple shadow for depth */
     font-size: 0.9em;
     position: fixed;
     top: 0;
@@ -32,110 +38,115 @@ body {
     width: 100%;
     z-index: 100;
     box-sizing: border-box;
+    border-bottom: 2px solid #2a4058; /* A hard edge to separate it from the body */
 }
 
 .header h1 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .header-links a {
-    color: #87dd6c; /* Green titles */
-    text-shadow: 0 0 5px #438032; /* Green glow effect */
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: 15px;
     font-size: 0.9em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-links a:hover {
+    color: #d1e0f0; /* Lighten the text on hover */
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+    display: flex; /* CHANGED: Reverted to flexbox */
+    flex-direction: column; /* CHANGED: Stack rows vertically */
+    width: 85%;
     max-width: 1200px;
-    margin: 60px auto 20px auto;
-    padding: 20px;
+    margin: 70px auto 20px auto; /* Adjust margin for the fixed header */
+    padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
     position: relative;
     gap: 15px;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 90px);
 }
 
 .row {
-    display: flex;
-    width: 100%;
+    display: flex; /* CHANGED: Each row is a flex container for its boxes */
     gap: 15px;
-    margin-bottom: 0;
 }
 
 .box {
-    background-color: rgb(37, 44, 35);
-    border: 2px solid #87dd6c;
+    background-color: #B0C4DE; /* Light steel blue, like an old OS window */
+    /* This border trick creates the classic 3D "beveled" or "inset" look */
+    border: 2px solid;
+    border-color: #d4e2f1 #637a95 #637a95 #d4e2f1;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(135, 221, 108);
-    flex: 1;
-    min-width: 300px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2); /* A more defined drop shadow */
+    flex: 1 1 300px; /* CHANGED: Allow boxes to grow and shrink from a 300px base */
+    border-radius: 0; /* Sharp corners were very common */
+    min-width: 0; /* Allow boxes to shrink properly */
 }
 
 .box h2 {
-    color: #438032; /* Green titles */
-    text-shadow: 0 0 5px #87dd6c; /* Green glow effect */
-    color: #87dd6c;
-    border-bottom: 1px solid #438032;
-    padding-bottom: 10px;
-    margin-top: 0; /* Reset  margin-top */
+    font-size: 1.2em;
+    color: #0d2c4f; /* A deep blue for contrast */
+    /* This creates a "title bar" effect for each box */
+    background-color: #88a2c0;
+    padding: 8px 12px;
+    margin: -20px -20px 20px -20px; /* Extends the title bar to the box edges */
+    border-bottom: 2px solid #637a95;
+    border-top: 2px solid #d4e2f1;
+    text-shadow: 1px 1px 1px #d4e2f1; /* A light shadow to make text feel inset */
 }
 
 #box1 {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 110px; /* Add padding to the top of the box */
+    padding-top: 10px;
 }
 
 #box1 .banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* Make the banner a block within the box, not an absolute background */
+    position: relative;
+    width: calc(100% + 40px);
+    margin: -30px -20px 15px -20px; /* Adjust to align with box padding */
     height: 200px;
-    color: #fff;
     background-size: cover;
     background-position: center;
-    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #637a95;
     z-index: 0;
 }
 
 #box1 .profile-picture-container {
-    position: absolute;
-    top: 15;
-    left: 25px;
+    /* Let the profile picture sit naturally in the flow */
+    position: relative;
+    top: 0;
+    left: 0;
     z-index: 1;
+    margin-top: -80px; /* Pull the avatar up to overlap the banner */
+    margin-bottom: 15px;
 }
 
 #box1 .profile-picture {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
-    border: 3px solid #87dd6c;
+    border-radius: 4px; /* A slightly rounded square is more period-correct than a circle */
+    border: 5px solid;
+    border-color: #d4e2f1 #637a95 #637a95 #d4e2f1; /* Beveled border */
     background-color: #333;
     object-fit: cover;
 }
 
-#box1 h2{
-    margin-top: 120px;
-    padding-top: 10px;
-}
-
-.badges {
-    display: flex;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.badges img {
-    max-height: 50px;
+#box1 h2 {
+    margin-top: 0;
+    padding-top: 8px;
 }
 
 .social-links {
@@ -144,56 +155,183 @@ body {
     gap: 10px;
 }
 
+/* Y2K gel/glass button style for links */
 .social-links a {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: rgb(60, 69, 57);
-    color: #87dd6c;
+    background: linear-gradient(to bottom, #ffffff 0%, #d4d4d4 100%);
+    color: #000000;
     text-decoration: none;
     border-radius: 5px;
+    border: 1px solid #777;
+    /* Inset shadow for shine, drop shadow for depth */
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.7), 1px 1px 3px rgba(0,0,0,0.2);
     text-align: left;
+    transition: all 0.2s ease-in-out;
 }
 
 .social-links a:hover {
-    background-color: rgb(135, 221, 108);
+    /* Invert the gradient and shadow on hover to simulate a "press" */
+    background: linear-gradient(to top, #ffffff 0%, #d4d4d4 100%);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .social-links i {
     margin-right: 10px;
     font-size: 1.2em;
-    color: #279700;
+    color: #3b5978; /* Icon color that matches the theme */
 }
 
-#spotify-status {
-    padding: 10px;
-    background-color: rgb(37, 44, 35);
-    border-radius: 5px;
-}
-
-#update-box {
-    background-color: rgb(37, 44, 35);
-    border: 2px solid #87dd6c;
+/* Ensure all other boxes share the same consistent "window" styling */
+#update-box, #spotify-status, #box3 {
+    background-color: #B0C4DE;
+    border: 2px solid;
+    border-color: #d4e2f1 #637a95 #637a95 #d4e2f1;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(135, 221, 108);
-    min-width: 300px;
-    max-width: 400px;
-}
-
-#box3 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 0;
 }
 
 #box3 img {
     max-width: 100%;
     margin-bottom: 5px;
+    border: 1px solid #637a95; /* Simple border for images */
+}
+/* CSS for the embedded guestbook iframe */
+/* CSS for the embedded guestbook iframe */
+.guestbook-iframe {
+    width: 100%;
+    height: 660px; /* Adjust height as needed */
+    border: none;
+    border-radius: 4px;
 }
 
-@media (min-width: 768px) {
-    .container {
-        align-items: center;
-    }
+.updates-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.update-entry {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #88a2c0; /* Separator line matching the theme */
+}
+
+.update-entry:last-child {
+    border-bottom: none; /* Remove border from the last item */
+    padding-bottom: 0;
+}
+
+.update-entry p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.update-entry strong {
+    color: #0d2c4f; /* Dark blue to match h2 titles */
+    font-weight: 700;
+}
+
+/* --- NEW CSS for Draggable Sidebar --- */
+#sidebar {
+    position: fixed;
+    left: 20px;
+    top: 80px;
+    width: 220px;
+    z-index: 1000;
+    background-color: #B0C4DE;
+    border: 2px solid;
+    border-color: #d4e2f1 #637a95 #637a95 #d4e2f1;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    font-family: 'Tektur', 'Arial', sans-serif;
+}
+
+.sidebar-header {
+    background: linear-gradient(to bottom, #7b9dbe 0%, #3b5978 100%);
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 1em;
+    user-select: none;
+}
+
+.minimize-btn {
+    background: #d4e2f1;
+    border: 1px solid;
+    border-color: #d4e2f1 #637a95 #637a95 #d4e2f1;
+    color: #0d2c4f;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height: 18px;
+}
+
+.minimize-btn:active {
+    border-color: #637a95 #d4e2f1 #d4e2f1 #637a95;
+}
+
+.sidebar-content {
+    padding: 10px;
+    transition: all 0.2s ease-out;
+    max-height: 500px; /* Set a max-height for transition */
+    overflow: hidden;
+}
+
+#sidebar.minimized .sidebar-content {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list .main-topic > span {
+    font-weight: bold;
+    display: block;
+    background-color: #88a2c0; /* Title bar background */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    padding: 4px 8px; /* Add some padding */
+    margin: 10px -10px 8px -10px; /* Make it stretch to the edges */
+    border-top: 1px solid #cad8e8; /* Light top border for 3D feel */
+    border-bottom: 1px solid #637a95; /* Dark bottom border */
+}
+
+.nav-list .sub-links {
+    list-style: none;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.nav-list .sub-links a {
+    text-decoration: none;
+    color: #3b5978;
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center;
+    padding: 2px 0;
+}
+
+.nav-list .sub-links a:hover {
+    color: #0d2c4f;
+    text-decoration: underline;
+}
+
+/* Style for the icons */
+.nav-list .sub-links a i {
+    margin-right: 8px; /* Space between icon and text */
+    width: 15px; /* Consistent width for alignment */
+    text-align: center;
 }
