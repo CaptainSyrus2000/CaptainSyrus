@@ -13,7 +13,7 @@ body {
     font-family: 'Tektur', 'Arial', sans-serif; /* Use Tektur for a techy feel, with Arial as a fallback */
     color: #000000; /* Standard black text for readability */
     background-color: #DCE5F0; /* A light, cool blue-gray background, common in Y2K UIs */
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle geometric pattern for texture */
+    background-image: url('https://frutigeraeroarchive.org/images/wallpapers/materialdictionary149/materialdictionary149_37.jpg'); /* Subtle geometric pattern for texture */
     overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
     /* CRT Phosphor Glow Effect */
     text-shadow: 0 0 1px rgba(255,255,255,0.7), 0 0 3px rgba(173, 216, 230, 0.5);
@@ -111,14 +111,14 @@ a, button, .minimize-btn, .social-links a, .header-links a {
     text-shadow: 1px 1px 1px #d4e2f1;
 }
 
-#box1 {
+#box1, #profile-box {
     display: flex;
     flex-direction: column;
     position: relative;
     padding-top: 10px;
 }
 
-#box1 .banner {
+#box1 .banner, #profile-box .banner {
     position: relative;
     width: calc(100% + 40px);
     margin: -30px -20px 15px -20px;
@@ -129,7 +129,7 @@ a, button, .minimize-btn, .social-links a, .header-links a {
     z-index: 0;
 }
 
-#box1 .profile-picture-container {
+#box1 .profile-picture-container, #profile-box .profile-picture-container {
     position: relative;
     top: 0;
     left: 0;
@@ -138,7 +138,7 @@ a, button, .minimize-btn, .social-links a, .header-links a {
     margin-bottom: 15px;
 }
 
-#box1 .profile-picture {
+#box1 .profile-picture, #profile-box .profile-picture {
     width: 120px;
     height: 120px;
     border-radius: 4px;
@@ -148,7 +148,7 @@ a, button, .minimize-btn, .social-links a, .header-links a {
     object-fit: cover;
 }
 
-#box1 h2 {
+#box1 h2, #profile-box h2 {
     margin-top: 0;
     padding-top: 8px;
 }
@@ -184,19 +184,13 @@ a, button, .minimize-btn, .social-links a, .header-links a {
     color: #3b5978;
 }
 
-#update-box, #spotify-status, #box3 {
+#update-box, #spotify-status, #box3, #stamps-box {
     background-color: #B0C4DE;
     border: 2px solid;
     border-color: #d4e2f1 #637a95 #637a95 #d4e2f1;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
     border-radius: 0;
-}
-
-#box3 img {
-    max-width: 100%;
-    margin-bottom: 5px;
-    border: 1px solid #637a95;
 }
 
 .guestbook-iframe {
