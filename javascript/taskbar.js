@@ -1,4 +1,4 @@
-// --- NEW JAVASCRIPT for Draggable and Minimizable Sidebar ---
+// ---JAVASCRIPT for Draggable and Minimizable Sidebar ---
 const sidebar = document.getElementById('sidebar');
 const sidebarHeader = sidebar.querySelector('.sidebar-header');
 const minimizeBtn = sidebar.querySelector('.minimize-btn');
