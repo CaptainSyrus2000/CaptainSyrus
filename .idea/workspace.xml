@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/Musicplayer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/Breakchild &amp; II-L - METEORITE.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/RQ - CROSSING 166.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/haiku.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/i never go swimming without my lip liner.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/music/medicine.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_fi.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_fi.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_sv.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_sv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,7 +117,7 @@
       <workItem from="1749927272163" duration="613000" />
       <workItem from="1750115943490" duration="2342000" />
       <workItem from="1750806677810" duration="1250000" />
-      <workItem from="1751313615301" duration="1843000" />
+      <workItem from="1751313615301" duration="1888000" />
     </task>
     <servers />
   </component>
