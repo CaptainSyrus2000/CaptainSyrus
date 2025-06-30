@@ -26,3 +26,51 @@
             <img src="https://comfybox.floofey.dog/imgs/buttons/php.gif" alt="">
             <img src="https://comfybox.floofey.dog/imgs/buttons/linux.gif" alt="">
             <img src="https://malsignature.com/?/view?username=CaptainSyrus&style=normal" alt="Stamp 4">
+
+
+
+                <!-- NEW Draggable Sidebar -->
+            <div id="sidebar">
+                <div class="sidebar-header">
+                    <span>Navigation</span>
+                    <button class="minimize-btn">_</button>
+                </div>
+                <div class="sidebar-content">
+                    <ul class="nav-list">
+                        <li class="main-topic">
+                            <span>the misc</span>
+                            <ul class="sub-links">
+                                <li><a href="#games-1"><i class="fas fa-gamepad"></i> Undergenre 1</a></li>
+                                <li><a href="#games-2"><i class="fas fa-gamepad"></i> Undergenre 2</a></li>
+                                <li><a href="#games-3"><i class="fas fa-gamepad"></i> Undergenre 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-topic">
+                            <span>Projects</span>
+                            <ul class="sub-links">
+                                <li><a href="https://frutigerspace.wiki/"><i class="fas fa-code"></i> frutigerspace.wiki</a></li>
+                                <li><a href="#projects-2"><i class="fas fa-code"></i> Undergenre 2</a></li>
+                                <li><a href="#projects-3"><i class="fas fa-code"></i> Undergenre 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <!-- Music Player is now outside the scrollable content area -->
+            <div id="music-player">
+                <div class="player-screen">
+                    <span id="track-title">Select a song</span>
+                </div>
+                <div class="player-controls">
+                    <button id="prev-btn"><i class="fas fa-backward-step"></i></button>
+                    <button id="play-pause-btn"><i class="fas fa-play"></i></button>
+                    <button id="next-btn"><i class="fas fa-forward-step"></i></button>
+                </div>
+                <ul id="playlist">
+                    <li data-src="music/Breakchild & II-L - METEORITE.mp3">Breakchild & II-L - METEORITE</li>
+                    <li data-src="music/RQ - CROSSING 166.mp3">RQ - CROSSING 166</li>
+                    <li data-src="music/medicine.mp3">lexycat - Medicine</li>
+                    <li data-src="music/haiku.mp3">Q the music - haiku</li>
+                </ul>
+            </div>
+            <audio id="audio-player"></audio>
+            </div>
