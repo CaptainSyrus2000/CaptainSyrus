@@ -13,9 +13,14 @@ function loadTrack(index) {
     if (index >= 0 && index < playlistItems.length) {
         const item = playlistItems[index];
         audioPlayer.src = item.getAttribute('data-src');
-        trackTitle.textContent = item.textContent;
+
+        // Update marquee text with 'NOW PLAYING'
+        trackTitle.textContent = "NOW PLAYING: " + item.textContent;
+
+        // Visual indicator in playlist (optional if visible)
         playlistItems.forEach(li => li.classList.remove('playing'));
         item.classList.add('playing');
+
         currentTrackIndex = index;
         isPlayerInitialized = true;
     }
@@ -60,17 +65,9 @@ function prevTrack() {
 }
 
 // Add event listeners to buttons
-playPauseBtn.addEventListener('click', playPauseTrack);
-nextBtn.addEventListener('click', nextTrack);
-prevBtn.addEventListener('click', prevTrack);
+if(playPauseBtn) playPauseBtn.addEventListener('click', playPauseTrack);
+if(nextBtn) nextBtn.addEventListener('click', nextTrack);
+if(prevBtn) prevBtn.addEventListener('click', prevTrack);
 
 // Go to the next song when the current one ends
 audioPlayer.addEventListener('ended', nextTrack);
-
-// Add event listeners to playlist items
-playlistItems.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        loadTrack(index);
-        audioPlayer.play();
-    });
-});
