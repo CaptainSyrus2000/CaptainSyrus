@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         precision mediump float;
         uniform vec2 u_resolution;
         uniform float u_time;
-        uniform float u_mode; // 0.0 = GC, 1.0 = Beatmania/NotITG
+        uniform float u_mode; // 0.0 = GC, 1.0 = NotITG
 
         // MODE 0: GC GOOP
         vec3 gcGoop(vec2 uv) {
@@ -48,59 +48,55 @@ document.addEventListener("DOMContentLoaded", function() {
             return color * vignette;
         }
 
-        // MODE 1: BEATMANIA / IIDX THEME
-        // Simulates vertical lanes, falling notes, and a turntable glow
-        vec3 iidxTheme(vec2 uv) {
-            // Dark futuristic background
-            vec3 bg = vec3(0.05, 0.05, 0.08);
-            
-            // 1. Create Lanes (7 Keys + 1 TT)
-            // Use fractional part of X to create repeating vertical beams
-            float numLanes = 8.0;
-            float laneX = fract(uv.x * 4.0 + 0.5); // 4 major divisions
-            float beam = smoothstep(0.45, 0.55, abs(laneX - 0.5)); // Edges of lanes
-            
-            // Lane Colors: Alternating White/Blue + Red/Pink for scratch
-            vec3 laneColor = vec3(0.0, 0.5, 1.0); // Cyan/Blue default
-            // Add some variation based on position
-            if (sin(uv.x * 20.0) > 0.5) laneColor = vec3(1.0, 1.0, 1.0); // White keys
-            if (uv.x > 0.6) laneColor = vec3(1.0, 0.0, 0.3); // Pink/Red Scratch zone
-            
-            // Vertical movement (falling notes feel)
-            float flow = mod(uv.y + u_time * 1.5, 1.0);
-            float note = smoothstep(0.9, 0.95, flow) * smoothstep(1.0, 0.95, flow); // Rectangular note
-            
-            // Combine Lanes + Notes
-            vec3 effect = bg;
-            
-            // Add faint lane guides
-            effect += laneColor * 0.1 * (1.0 - beam); 
-            
-            // Add Falling Notes (Bright flashes)
-            effect += laneColor * note * 0.8;
-            
-            // 2. Turntable / Speaker Pulse (Circular element)
-            // Centered or offset slightly
-            vec2 center = vec2(0.0, -0.2); 
-            float dist = length(uv - center);
-            
-            // Radial equalizer lines
-            float angle = atan(uv.y - center.y, uv.x - center.x);
-            float eq = sin(angle * 20.0 + u_time * 5.0) * 0.5 + 0.5;
-            float ring = smoothstep(0.4, 0.38, dist) * smoothstep(0.3, 0.32, dist);
-            
-            // Pulse on beat
-            float beat = pow(sin(u_time * 3.0) * 0.5 + 0.5, 4.0);
-            
-            // Combine Circular elements
-            vec3 scratchColor = vec3(1.0, 0.0, 0.5); // Neon Pink
-            effect += scratchColor * ring * eq * beat * 0.5;
-            
-            // Global scanline for retro feel
-            float scan = sin(uv.y * 100.0) * 0.05;
-            effect += vec3(scan);
+        // MODE 1: NOTITG 4K CHART
+        float arrow(vec2 p, float angle) {
+            float s = sin(angle); float c = cos(angle);
+            p = vec2(p.x * c - p.y * s, p.x * s + p.y * c);
+            p.y += 0.25;
+            float d = max(abs(p.x) * 0.8 + p.y, -p.y - 1.0); 
+            float d2 = max(abs(p.x) - 0.25, abs(p.y + 0.5) - 0.5); 
+            return min(d, max(d2, -p.y - 0.5));
+        }
 
-            return effect;
+        vec3 notItgChart(vec2 uv) {
+            vec3 color = vec3(0.05, 0.05, 0.05); 
+            float laneWidth = 0.4;
+            vec2 p = uv; 
+            p.x += sin(p.y * 2.0 + u_time) * 0.1; 
+            float rot = sin(u_time * 0.5) * 0.1;
+            float s = sin(rot); float c = cos(rot);
+            p = vec2(p.x * c - p.y * s, p.x * s + p.y * c);
+
+            float totalWidth = laneWidth * 4.0;
+            float lane = floor((p.x + totalWidth * 0.5) / laneWidth);
+            float localX = mod(p.x + totalWidth * 0.5, laneWidth) - laneWidth * 0.5;
+            
+            if (lane >= 0.0 && lane < 4.0) {
+                float angle = 0.0;
+                if (lane == 0.0) angle = 1.57;
+                if (lane == 1.0) angle = 3.14;
+                if (lane == 2.0) angle = 0.0;
+                if (lane == 3.0) angle = -1.57;
+                
+                vec3 laneColor = vec3(1.0);
+                if (lane == 0.0) laneColor = vec3(1.0, 0.2, 0.2);
+                if (lane == 1.0) laneColor = vec3(0.2, 0.2, 1.0);
+                if (lane == 2.0) laneColor = vec3(0.2, 1.0, 0.2);
+                if (lane == 3.0) laneColor = vec3(1.0, 0.2, 0.2);
+
+                float scrollY = p.y + u_time * 2.0;
+                float noteY = mod(scrollY, 0.8) - 0.4;
+                float hasNote = step(0.3, fract(sin(floor(scrollY/0.8) * 12.9898 + lane * 78.233) * 43758.5453));
+                
+                if (hasNote > 0.5) {
+                    float d = arrow(vec2(localX, noteY) * 4.0, angle);
+                    color = mix(color, laneColor, smoothstep(0.1, 0.0, d));
+                }
+                float dRec = arrow(vec2(localX, p.y - 0.8) * 4.0, angle);
+                color += laneColor * smoothstep(0.15, 0.0, abs(dRec)) * 0.5; 
+            }
+            color += vec3(0.1, 0.0, 0.2) * (0.5 + 0.5 * sin(length(uv) * 10.0 - u_time * 5.0));
+            return color;
         }
 
         void main() {
@@ -113,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 gcUV.x *= u_resolution.x / u_resolution.y;
                 gl_FragColor = vec4(gcGoop(gcUV), 1.0);
             } else {
-                gl_FragColor = vec4(iidxTheme(aspectUV), 1.0);
+                gl_FragColor = vec4(notItgChart(aspectUV), 1.0);
             }
         }
     `;
@@ -159,13 +155,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // LISTEN FOR THEME CHANGE
-    let currentMode = 0.0;
-    window.addEventListener('themeChanged', (e) => {
-        console.log("Shader received theme change:", e.detail.theme);
-        currentMode = (e.detail.theme === 'notitg') ? 1.0 : 0.0;
-    });
-
     function render(time) {
         time *= 0.001;
         gl.useProgram(program);
@@ -176,8 +165,9 @@ document.addEventListener("DOMContentLoaded", function() {
         gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height);
         gl.uniform1f(timeUniformLocation, time);
 
-        // Use the variable updated by the event listener
-        gl.uniform1f(modeUniformLocation, currentMode);
+        const theme = document.body.getAttribute('data-theme');
+        const modeVal = (theme === 'notitg') ? 1.0 : 0.0;
+        gl.uniform1f(modeUniformLocation, modeVal);
 
         gl.drawArrays(gl.TRIANGLES, 0, 6);
         requestAnimationFrame(render);

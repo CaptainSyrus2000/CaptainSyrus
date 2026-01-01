@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9b54084-ea30-4daf-9d77-7a437ede7da7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/25a65a85e529510173ecd9c50d23bbb6__1_-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/2a1c92a28f4964602be02a3102107260.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/bg-shader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/bg-shader1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/script1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archive.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_fi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index_sv.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/Musicplayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/Musicplayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/bg-shader.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/bg-shader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -67,6 +66,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/jayde/Downloads/FrutigerSpaceWiki-dev-branch/CaptainSyrus/javascript",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,6 +78,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jayde\Downloads\FrutigerSpaceWiki-dev-branch\CaptainSyrus\javascript" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jayde\Downloads\FrutigerSpaceWiki-dev-branch\CaptainSyrus\Images" />
       <recent name="C:\Users\jayde\Downloads\FrutigerSpaceWiki-dev-branch\CaptainSyrus" />
@@ -145,7 +148,7 @@
       <workItem from="1750115943490" duration="2342000" />
       <workItem from="1750806677810" duration="1250000" />
       <workItem from="1751313615301" duration="1888000" />
-      <workItem from="1767161767077" duration="11115000" />
+      <workItem from="1767161767077" duration="22519000" />
     </task>
     <servers />
   </component>

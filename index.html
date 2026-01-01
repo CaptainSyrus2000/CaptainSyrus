@@ -13,29 +13,33 @@
 </head>
 <body>
 
-<div class="theme-toggle-container">
-    <button class="theme-btn" onclick="toggleTheme()" title="SWITCH SYSTEM"></button>
-</div>
-
-<div class="scanlines"></div>
-
 <div class="folder-container">
 
-    <div class="folder-tabs">
-        <div class="tab active" onclick="switchTab('home')">HOME</div>
-        <div class="tab" onclick="switchTab('projects')">PROJ</div>
-        <div class="tab" onclick="switchTab('guestbook')">GSTBK</div>
-    </div>
-
+    <!-- Main Content Body -->
     <div class="folder-body">
 
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/GameCube-Console-Set.png" class="gc-decor" alt="GC Decor">
 
+        <!-- Unified Top Bar -->
         <div class="top-bar">
-            <span><i class="fas fa-cube"></i> SYRUS_LAN_LAB</span>
-            <span id="clock" style="font-size: 1rem; opacity: 0.8;">00:00</span>
+            <div class="top-bar-left">
+                <span><i class="fas fa-cube"></i> SYRUS_LAN_LAB</span>
+            </div>
+
+            <!-- Navigation Buttons Integrated Here -->
+            <div class="nav-box-row">
+                <div id="tab-home" class="nav-box active" onclick="switchTab(event, 'home')">HOME</div>
+                <div id="tab-coll" class="nav-box" onclick="switchTab(event, 'collectables')">COLL</div>
+                <div id="tab-proj" class="nav-box" onclick="switchTab(event, 'projects')">PROJ</div>
+                <div id="tab-gstbk" class="nav-box" onclick="switchTab(event, 'guestbook')">GSTBK</div>
+            </div>
+
+            <div class="top-bar-right">
+                <span id="clock">00:00</span>
+            </div>
         </div>
 
+        <!-- Home View -->
         <div id="home" class="content-view active">
 
             <div class="profile-section">
@@ -60,7 +64,7 @@
                         </ul>
                     </div>
 
-                    <!-- Music Drawer integrated here based on your provided structure -->
+                    <!-- Music Player -->
                     <div class="music-folder">
                         <div class="folder-tab-top">DISC_DRIVE</div>
                         <div class="music-content">
@@ -82,6 +86,30 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- TV MONITOR -->
+                    <div class="tv-monitor-container">
+                        <div class="tv-set">
+                            <div class="tv-screen tv-off" id="tv-screen">
+                                <video id="tv-video" class="tv-video" loop>
+                                    <source src="Images/videoplayback.mp4" type="video/mp4">
+                                </video>
+                                <div class="tv-static"></div>
+                            </div>
+
+                            <div class="tv-controls">
+                                <div class="tv-btn-group">
+                                    <button class="tv-btn power-btn" onclick="toggleTVPower()" title="Power"></button>
+                                    <span class="tv-label">PWR</span>
+                                </div>
+                                <div class="tv-btn-group">
+                                    <button class="tv-btn channel-btn" onclick="switchChannel()" title="Channel"></button>
+                                    <span class="tv-label">CH</span>
+                                </div>
+                                <div class="tv-speaker"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-right">
@@ -98,64 +126,79 @@
                     </div>
 
                     <div class="info-box">
+                        <h3>:: DATE_LOG ::</h3>
+                        <div class="calendar-widget">
+                            <div id="calendar-month-year" class="calendar-header">MONTH YEAR</div>
+                            <div id="calendar-grid" class="calendar-grid"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
                         <h3>:: CONNECT ::</h3>
-                        <div class="link-grid">
-                            <a href="https://discord.gg/mHhufEEepe"><i class="fab fa-discord"></i> Frutiger Space</a>
-                            <a href="https://frutigerspace.wiki/"><i class="fas fa-globe"></i> Frutiger Wiki</a>
-                            <a href="https://steamcommunity.com/id/hal_leo/"><i class="fab fa-steam"></i> Steam ID</a>
+                        <div class="connect-grid">
+                            <a href="https://discord.gg/mHhufEEepe" class="connect-btn discord"><i class="fab fa-discord"></i><span>Frutiger Space</span></a>
+                            <a href="https://frutigerspace.wiki/" class="connect-btn wiki"><i class="fas fa-globe"></i><span>Frutiger Wiki</span></a>
+                            <a href="https://steamcommunity.com/id/hal_leo/" class="connect-btn steam"><i class="fab fa-steam"></i><span>Steam ID</span></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="button-shrine">
-                <img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt="">
-                <img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt="">
-                <img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt="B">
-                <img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/blender.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/applelinks2.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/buyebaystuff88x31.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/color.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/censor_14c.gif" alt="">
-                <img src="https://nekoha.moe/assets/ostan.gif" alt="">
-                <img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="">
-                <img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png" alt="">
-                <img src="https://adriansblinkiecollection.neocities.org/buttons/a128.gif" alt="">
-                <img src="https://adriansblinkiecollection.neocities.org/buttons/h3.gif" alt="">
-                <img src="https://cyber.dabamos.de/88x31/debian-powered.gif" alt="">
-                <img src="https://cdn.discordapp.com/attachments/1304862407855833138/1381830808972820630/Untitled.gif1.png?ex=6848f1ba&is=6847a03a&hm=988ddf77de21afd22e47d1ae26b5c994352cce2d8a18b242a8022239f928c8dc&" alt="">
-                <img src="https://cyber.dabamos.de/88x31/firefox3.gif" alt="">
-                <img src="https://cdn.discordapp.com/attachments/962179885231652966/1381829429097009286/Untitled.gif.png?ex=6848f071&is=68479ef1&hm=e3b8287f666e4abd2308b044c32554714c2e8802145bd64ece1fb4a7864b01c6&" alt="">
-                <img src="https://cyber.dabamos.de/88x31/gfaqs.gif" alt="">
-                <img src="https://comfybox.floofey.dog/imgs/buttons/anonymize.png" alt="">
-                <img src="https://comfybox.floofey.dog/imgs/buttons/php.gif" alt="">
-                <img src="https://comfybox.floofey.dog/imgs/buttons/linux.gif" alt="">
+            <div class="sticker-container">
+                <div class="sticker-header">:: COLLECTABLES ::</div>
+
+                <div class="sticker-row-wrapper">
+                    <div class="sticker-row scroll-left">
+                        <div class="sticker-slot"><img src="https://adriansblinkiecollection.neocities.org/buttons/e15.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://external-media.spacehey.net/media/sFsZqTZ2fLbk2f8V3B0djL_F21KiY-qaT41PF47v3dEc=/https://64.media.tumblr.com/4e006833bd9b8fe784acd83347b56639/1e3a948cfbda328c-b7/s100x200/8abd5d452ca400ac72e50c5b9e5dd1d43e8b13c7.gifv" alt=""></div>
+                        <div class="sticker-slot"><img src="https://adriansblinkiecollection.neocities.org/buttons/g4.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://adriansblinkiecollection.neocities.org/buttons/b2.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/blender.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/gnu-linux.gif" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="sticker-row-wrapper">
+                    <div class="sticker-row scroll-right">
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/applelinks2.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/buyebaystuff88x31.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/color.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://cyber.dabamos.de/88x31/censor_14c.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://nekoha.moe/assets/ostan.gif" alt=""></div>
+                        <div class="sticker-slot"><img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt=""></div>
+                        <div class="sticker-slot"><img src="https://frutigeraero.org/images/resources/buttons/frutiger_aero_community.png" alt=""></div>
+                    </div>
+                </div>
             </div>
+
         </div>
+
+
 
         <div id="projects" class="content-view">
             <h2>:: GAME_LIBRARY ::</h2>
-
-            <div class="project-card">
-                <h3>> Frutiger Space</h3>
-                <p>Moderator for Frutiger Space and Wiki.</p>
-                <a href="https://frutigerspace.wiki/" class="retro-link">PRESS START</a>
-            </div>
-
-            <div class="project-card">
-                <h3>> The Misc</h3>
-                <p>Sub-genre exploration and lists.</p>
-                <a href="#" class="retro-link">PRESS START</a>
+            <div class="project-mc-grid">
+                <div class="mc-card-slot">
+                    <div class="memory-card-icon">
+                        <div class="mc-notch"></div>
+                        <div class="mc-inner">
+                            <i class="fas fa-leaf mc-symbol"></i>
+                            <div class="mc-id">MC-59</div>
+                        </div>
+                        <div class="mc-label">FRUTIGER_SP</div>
+                        <div class="mc-tooltip"><strong>Frutiger Space</strong><br>Wiki & Community</div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="guestbook" class="content-view">
-            <h2>:: MESSAGES ::</h2>
-            <div class="guestbook-container">
-                <iframe src="https://users.smartgb.com/g/g.php?a=s&i=g19-02254-6e" scrolling="yes" frameborder="0"></iframe>
+            <div class="guestbook-fullscreen">
+                <h2>:: MESSAGES ::</h2>
+                <div class="guestbook-container">
+                    <iframe src="https://users.smartgb.com/g/g.php?a=s&i=g19-02254-6e" scrolling="yes" frameborder="0"></iframe>
+                </div>
             </div>
         </div>
 
